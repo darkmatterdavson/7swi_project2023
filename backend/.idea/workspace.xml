@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0253590-ae1a-40cd-9d80-8c17e7699dc7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/repository/MovieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/repository/ReviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/MovieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/MovieServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java" afterDir="false" />
+    </list>
+    <list id="cdd4c203-ab63-460e-a6d2-584cd5c7ad6f" name="Changes by peter" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +25,16 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="cdd4c203-ab63-460e-a6d2-584cd5c7ad6f" />
+        <range start1="4" end1="4" start2="5" end2="7" changelist="e0253590-ae1a-40cd-9d80-8c17e7699dc7" />
+        <range start1="6" end1="7" start2="9" end2="11" changelist="cdd4c203-ab63-460e-a6d2-584cd5c7ad6f" />
+        <range start1="9" end1="9" start2="13" end2="45" changelist="e0253590-ae1a-40cd-9d80-8c17e7699dc7" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -57,6 +61,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "D:/7SWI1_semestralwork2022-/reviewgameapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -90,7 +95,8 @@
       <workItem from="1680451066247" duration="1246000" />
       <workItem from="1680452775282" duration="1075000" />
       <workItem from="1680468080884" duration="99000" />
-      <workItem from="1680622444095" duration="3429000" />
+      <workItem from="1680622444095" duration="3601000" />
+      <workItem from="1680878879669" duration="1194000" />
     </task>
     <servers />
   </component>
