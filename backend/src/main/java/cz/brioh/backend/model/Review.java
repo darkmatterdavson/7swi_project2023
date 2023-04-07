@@ -3,9 +3,8 @@ package cz.brioh.backend.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import org.hibernate.annotations.Type;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -27,7 +26,7 @@ public class Review {
     private Movie movie;
 
     @NotNull
-    private Date date;
+    private LocalDateTime datePublished;
 
     @NotNull
     private int score;
@@ -36,5 +35,51 @@ public class Review {
     @NotNull
     private String content;
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
+    public LocalDateTime getDatePublished() {
+        return datePublished;
+    }
+
+    public void setDatePublished(LocalDateTime datePublished) {
+        this.datePublished = datePublished;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

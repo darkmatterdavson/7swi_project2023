@@ -22,6 +22,8 @@ public class User {
     @NotNull
     private boolean isAdmin;
 
+    public User(){}
+
     public User(long id, String name, String password, String email, boolean isAdmin) {
         this.id = id;
         this.name = name;
