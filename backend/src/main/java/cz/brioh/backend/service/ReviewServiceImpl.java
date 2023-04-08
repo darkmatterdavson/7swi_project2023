@@ -3,10 +3,12 @@ package cz.brioh.backend.service;
 import cz.brioh.backend.exception.RecordNotFoundException;
 import cz.brioh.backend.model.Review;
 import cz.brioh.backend.repository.ReviewRepository;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
 public class ReviewServiceImpl implements ReviewService {
 
     private ReviewRepository reviewRepository;

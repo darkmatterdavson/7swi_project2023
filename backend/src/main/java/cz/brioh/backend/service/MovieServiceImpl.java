@@ -3,9 +3,11 @@ package cz.brioh.backend.service;
 import cz.brioh.backend.exception.RecordNotFoundException;
 import cz.brioh.backend.model.Movie;
 import cz.brioh.backend.repository.MovieRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class MovieServiceImpl implements MovieService{
 
     private MovieRepository movieRepository;

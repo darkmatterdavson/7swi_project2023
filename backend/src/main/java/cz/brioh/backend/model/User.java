@@ -3,8 +3,10 @@ package cz.brioh.backend.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
+import java.util.List;
+
 @Entity
-@Table(name = "users")
+@Table(name = "users", uniqueConstraints = {@UniqueConstraint(columnNames = {"name"}), @UniqueConstraint(columnNames = {"email"})})
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,14 +24,18 @@ public class User {
     @NotNull
     private boolean isAdmin;
 
+    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "user", fetch = FetchType.EAGER)
+    private List<Review> reviews;
+
     public User(){}
 
-    public User(long id, String name, String password, String email, boolean isAdmin) {
+    public User(long id, String name, String password, String email, boolean isAdmin, List<Review> reviews) {
         this.id = id;
         this.name = name;
         this.password = password;
         this.email = email;
         this.isAdmin = isAdmin;
+        this.reviews = reviews;
     }
 
     public long getId() {
@@ -70,5 +76,13 @@ public class User {
 
     public void setAdmin(boolean admin) {
         isAdmin = admin;
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 }

@@ -3,6 +3,9 @@ package cz.brioh.backend.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -25,15 +28,24 @@ public class Review {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Movie movie;
 
-    @NotNull
     private LocalDateTime datePublished;
 
     @NotNull
     private int score;
 
-
     @NotNull
     private String content;
+
+    public Review(){}
+
+    public Review(long id, User user, Movie movie, LocalDateTime datePublished, int score, String content) {
+        this.id = id;
+        this.user = user;
+        this.movie = movie;
+        this.datePublished = datePublished;
+        this.score = score;
+        this.content = content;
+    }
 
     public long getId() {
         return id;

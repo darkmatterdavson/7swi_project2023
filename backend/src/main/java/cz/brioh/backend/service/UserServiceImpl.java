@@ -35,6 +35,7 @@ public class UserServiceImpl implements UserService{
             userFromDb.setAdmin(user.isAdmin());
             userFromDb.setEmail(user.getEmail());
             userFromDb.setPassword(user.getPassword());
+            userFromDb.setReviews(user.getReviews());
             userRepository.save(userFromDb);
         } else{
             throw new RecordNotFoundException("User not found.");

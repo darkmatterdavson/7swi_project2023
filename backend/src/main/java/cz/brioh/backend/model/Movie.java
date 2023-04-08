@@ -20,6 +20,7 @@ public class Movie {
 
     private String description;
 
+    public Movie(){}
     public Movie(long id, String title, long year, String thumbnail, String description) {
         this.id = id;
         this.title = title;

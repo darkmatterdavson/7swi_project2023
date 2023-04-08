@@ -23,4 +23,9 @@ public class UserController {
     public User get(@PathVariable("id") long id){
         return userService.get(id);
     }
+
+    @DeleteMapping("users/{id}")
+    public void delete(@PathVariable("id") long id) throws Exception {
+        userService.delete(id);
+    }
 }
