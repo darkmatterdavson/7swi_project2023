@@ -37,4 +37,9 @@ public class MovieController {
         return movieService.search(name);
     }
 
+    @DeleteMapping("movies/{id}")
+    public void delete(@PathVariable("id") long id) throws Exception {
+        movieService.delete(id);
+    }
+
 }

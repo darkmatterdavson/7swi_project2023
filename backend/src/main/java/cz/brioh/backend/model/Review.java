@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
-@Table(name = "reviews")
+@Table(name = "reviews", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id"})})
 
 public class Review {
     @Id

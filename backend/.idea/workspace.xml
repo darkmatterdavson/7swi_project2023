@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0253590-ae1a-40cd-9d80-8c17e7699dc7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/MovieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/ReviewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/MovieServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/MovieServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <list id="cdd4c203-ab63-460e-a6d2-584cd5c7ad6f" name="Changes by peter" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "D:/UsersFiles/repos/swi/7swi_project2023/backend",
+    "last_opened_file_path": "D:/UsersFiles/Downloads/Java-iKapela/Java-iKapela",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,6 +91,10 @@
       <workItem from="1680622444095" duration="3601000" />
       <workItem from="1680878879669" duration="1194000" />
       <workItem from="1680966745452" duration="5956000" />
+      <workItem from="1681492638465" duration="1798000" />
+      <workItem from="1681626152056" duration="73000" />
+      <workItem from="1681626578219" duration="620000" />
+      <workItem from="1681656639538" duration="4712000" />
     </task>
     <servers />
   </component>
