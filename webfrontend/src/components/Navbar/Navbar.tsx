@@ -1,7 +1,20 @@
+"use client"
 import Link from "next/link";
 import LoginModal from "@/components/Modal/Login";
 import {useState} from "react";
-export default function Navbar(){
+export default function Navbar(props: {isLogged: boolean }){
+    const [userIsLogged, setuserIsLogged] = useState<boolean>(props.isLogged);
+
+    function displayStuff(){
+        if(userIsLogged) return <li className="nav-item">
+            <Link className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Log out</Link>
+        </li>
+        else{
+            return <li className="nav-item">
+                <button className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Login</button>
+            </li>
+        }
+    }
 
     return (
         <>
@@ -22,12 +35,7 @@ export default function Navbar(){
                             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                     <ul className="navbar-nav ms-auto">
-                        <li className="nav-item">
-                            <button className="nav-link">Login</button>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" href="#">Log out</Link>
-                        </li>
+                        {displayStuff()}
                     </ul>
                 </div>
             </nav>
