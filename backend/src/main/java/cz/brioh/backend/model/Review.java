@@ -11,8 +11,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
-@Table(name = "reviews", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id"})})
-
+@Table(name = "reviews", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "movie_id"})})
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
