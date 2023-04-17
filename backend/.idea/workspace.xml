@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0253590-ae1a-40cd-9d80-8c17e7699dc7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../webfrontend/src/app/movies/[movieID]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webfrontend/src/app/movies/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webfrontend/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webfrontend/src/components/Modal/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webfrontend/src/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../webfrontend/src/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/model/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webfrontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../webfrontend/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webfrontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webfrontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webfrontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webfrontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webfrontend/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../webfrontend/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webfrontend/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../webfrontend/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webfrontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webfrontend/tsconfig.json" afterDir="false" />
     </list>
     <list id="cdd4c203-ab63-460e-a6d2-584cd5c7ad6f" name="Changes by peter" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,21 +61,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "D:/UsersFiles/Downloads/Java-iKapela/Java-iKapela",
+    "last_opened_file_path": "D:/GitHub/git_projects/7swi_project2023/webfrontend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
-    "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a",
+    "spring.configuration.checksum": "3241ca6184e7e06d7e2313367e60913a",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="ALTERNATIVE_JRE_PATH" value="19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="backend" />
+      <module name="backend.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cz.brioh.backend.BackendApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,6 +104,12 @@
       <workItem from="1681626152056" duration="73000" />
       <workItem from="1681626578219" duration="620000" />
       <workItem from="1681656639538" duration="4712000" />
+      <workItem from="1681662703898" duration="706000" />
+      <workItem from="1681667146958" duration="6000" />
+      <workItem from="1681719519699" duration="1841000" />
+      <workItem from="1681737321356" duration="930000" />
+      <workItem from="1681744747183" duration="20000" />
+      <workItem from="1681744783771" duration="294000" />
     </task>
     <servers />
   </component>
