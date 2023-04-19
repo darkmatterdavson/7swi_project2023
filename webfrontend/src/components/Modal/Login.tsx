@@ -48,4 +48,4 @@ function LoginModal(){
     }
 }
 
-export default ;
+export default LoginModal;

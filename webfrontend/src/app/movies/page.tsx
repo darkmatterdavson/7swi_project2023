@@ -1,23 +1,22 @@
-export const metadata = {
-    title: "All movies"
+import MovieList from "@/components/MovieList/MovieList";
+
+export default function Movies(){
+    // @ts-ignore
+    return(
+        <>
+            <div id="page-content">
+                <div className="container text-center">
+                    <div className="row justify-content-center">
+                        <div className="col-md-7">
+                            <h1 className="fw-light mt-4 text-black">List of all movies</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <MovieList/>
+         </>
+    )
 }
-
-type Movie = {
-    id: Number,
-    title: string,
-    year: number,
-    thumbnail: string,
-    description: string
-}
-
-const Movies = () =>{
-    /*const fetcher = (...args: [ url: string, init: RequestInit ]) => fetch(...args).then(res => res.json());
-    const {data: games, error} = useSWR("http://localhost:8090/game/all", fetcher, {refreshInterval: 60000});*/
-    return(<>
-
-    </>);
-}
-
-export default Movies;
 
 
