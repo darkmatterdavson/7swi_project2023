@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0253590-ae1a-40cd-9d80-8c17e7699dc7" name="Changes" comment="">
+    <list default="true" id="e0253590-ae1a-40cd-9d80-8c17e7699dc7" name="Changes" comment="Added unit tests and a method for finding a user by username/checking whether the username is already taken.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cz/brioh/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cz/brioh/backend/BackendApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/repository/ReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/service/ReviewServiceImpl.java" afterDir="false" />
     </list>
     <list id="cdd4c203-ab63-460e-a6d2-584cd5c7ad6f" name="Changes by peter" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +72,7 @@
       <recent name="cz.brioh.backend" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BackendApplicationTests">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="BackendApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -188,11 +188,16 @@
       <workItem from="1681920534794" duration="5557000" />
       <workItem from="1682002782390" duration="7031000" />
       <workItem from="1682178030331" duration="152000" />
-      <workItem from="1682178653996" duration="1443000" />
+      <workItem from="1682178653996" duration="1665000" />
+      <workItem from="1682262355649" duration="2860000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added unit tests and a method for finding a user by username/checking whether the username is already taken." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added unit tests and a method for finding a user by username/checking whether the username is already taken." />
   </component>
 </project>

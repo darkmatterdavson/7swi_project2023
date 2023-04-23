@@ -40,4 +40,14 @@ public class ReviewServiceImpl implements ReviewService {
         }
     }
 
+    @Override
+    public List<Review> findByMovieId(long id) {
+        return reviewRepository.findAllByMovie_Id(id);
+    }
+
+    @Override
+    public Review findByMovieIdAndUserId(long movieId, long userId) {
+        return reviewRepository.findByMovie_IdAndUser_id(movieId, userId);
+    }
+
 }

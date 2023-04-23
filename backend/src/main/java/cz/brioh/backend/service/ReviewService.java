@@ -8,5 +8,7 @@ public interface ReviewService {
     Review create(Review review);
     Review get(long id);
     void delete(long id) throws Exception;
+    List<Review> findByMovieId(long id);
+    Review findByMovieIdAndUserId(long movieId, long userId);
 
 }
