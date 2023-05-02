@@ -4,6 +4,7 @@ import cz.brioh.backend.exception.RecordNotFoundException;
 import cz.brioh.backend.model.Review;
 import cz.brioh.backend.model.User;
 import cz.brioh.backend.repository.ReviewRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -51,8 +52,8 @@ public class ReviewServiceImpl implements ReviewService {
         return reviewRepository.findByMovie_IdAndUser_id(movieId, userId);
     }
 
-    public List<Object[]> findReviewAndUserByMovieIdAndUserId(long movieId, long userId){
-        return reviewRepository.findReviewAndUserByMovie_IdAndUser_Id(movieId, userId);
+    public List<Object[]> findReviewsAndTheirUsersNamesByMovieId(long movieId){
+        return reviewRepository.findReviewsAndTheirUsersNamesByMovieId(movieId);
     }
 
 }

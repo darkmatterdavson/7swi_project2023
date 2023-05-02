@@ -2,6 +2,7 @@ package cz.brioh.backend.service;
 
 import cz.brioh.backend.model.Review;
 import cz.brioh.backend.model.User;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -11,6 +12,6 @@ public interface ReviewService {
     void delete(long id) throws Exception;
     List<Review> findByMovieId(long id);
     Review findByMovieIdAndUserId(long movieId, long userId);
-    List<Object[]> findReviewAndUserByMovieIdAndUserId(long movieId, long userId);
+    List<Object[]> findReviewsAndTheirUsersNamesByMovieId(long movieId);
 
 }

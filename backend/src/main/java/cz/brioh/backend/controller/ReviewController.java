@@ -39,9 +39,9 @@ public class ReviewController {
         return reviewService.findByMovieIdAndUserId(movie_id, user_id);
     }
 
-    @GetMapping("users/search/{movie_id}/movies/{user_id}")
-    public List<Object[]> searchUser(@PathVariable long movie_id, @PathVariable long user_id) {
-        return reviewService.findReviewAndUserByMovieIdAndUserId(movie_id, user_id);
+    @GetMapping("movies/{movie_id}/reviews")
+    public List<Object[]> getMovieReviews(@PathVariable long movie_id) {
+        return reviewService.findReviewsAndTheirUsersNamesByMovieId(movie_id);
     }
 
 
