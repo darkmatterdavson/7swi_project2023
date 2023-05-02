@@ -13,7 +13,7 @@ export default function Movies(){
                     </div>
                 </div>
             </div>
-
+            <br/><br/>
             <MovieList/>
          </>
     )

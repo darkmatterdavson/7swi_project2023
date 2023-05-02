@@ -12,8 +12,6 @@ export default function Home() {
 
   return (
       <>
-          <LoginAlt />
-
           <div id="page-content">
               <div className="container text-center">
                   <div className="row justify-content-center">

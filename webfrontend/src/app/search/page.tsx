@@ -1,40 +1,35 @@
-export const metadata = {
-    title: "Search answers"
-}
-export default function SearchPage(){
+"use client"
+import SearchList from "@/components/MovieList/SearchList";
+import useData from "@/lib/useData";
+
+/*export const metadata = {
+    title: "Search"
+}*/
+export default function SearchPage({params, searchParams}: {
+    params: { slug: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+}){
+    const { q } = searchParams;
+    const {data, isLoading, error} = useData(`http://localhost:8080/movies/search/${q}`)
+    console.log(q, data);
+
+
+
     return(
         <>
-            <div className={"container row justify-content-center"}>
-                <table className="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colSpan={2}>Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div id="page-content">
+                <div className="container text-center">
+                    <div className="row justify-content-center">
+                        <div className="col-md-7">
+                            <h1 className="fw-light mt-4 text-black">Search</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <br/><br/> {
+                !isLoading && data ?
+            <SearchList movies={data}/> : <>Nebylo nic nalezeno</>
+        }
         </>
     )
 }

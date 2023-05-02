@@ -1,6 +1,7 @@
 import '../css/custom.css';
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import LoginAlt from "@/components/Modal/LoginAlt";
 
 export const metadata = {
   title: {default: "MovieReviews",  template: "%s | MovieReviews"},
@@ -8,8 +9,6 @@ export const metadata = {
   authors: [{ name: 'DavSonCZE'},{name: 'Komtur'}],
   keywords: ['movieReviews'],
 }
-
-
 
 export default function RootLayout({
   children,
@@ -29,7 +28,9 @@ export default function RootLayout({
               crossOrigin="anonymous"></script>
 
         <Navbar/>
+            <LoginAlt />
           {children}
+        <br/><br/><br/><br/><br/><br/>
         <Footer/>
       </body>
     </html>

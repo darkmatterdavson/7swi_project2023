@@ -15,14 +15,13 @@ type Movie = {
     description: String,
 }
 
-const Movies = () =>{
-    const {data: movies, isLoading} = useData("http://localhost:8080/movies");
+const SearchMovies = ({movies}: {movies: Movie[]}) =>{
     return(<>
-        {(!isLoading && movies) ?
+
             (<div className={"row justify-content-center mx-0"}>
                 {movies?.map((movie: Movie) => {
                     return (
-                        <div key={movie.id.toString()} className="card" style={{width: '18rem'}}>
+                        <div className="card" key={movie.id.toString()} style={{width: '18rem'}}>
                             <img className="card-img-top" id={"custom_thumbmail"} style={{maxWidth: 300}} src={movie.thumbnail.toString()} alt="Card image cap"/>
                             <div className="card-body">
                                 <Link key={movie.id.toString()} href={"/movies/"+ movie.id}>
@@ -32,10 +31,9 @@ const Movies = () =>{
                             </div>
                         </div>
                     )
-            })}
-            </div>):(<p>Načítám data!</p>)
-        }
-        </>)
+                })}
+            </div>)
+    </>)
 }
 
-export default Movies;
+export default SearchMovies
