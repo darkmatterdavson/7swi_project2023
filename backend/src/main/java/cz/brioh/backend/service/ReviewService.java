@@ -1,6 +1,7 @@
 package cz.brioh.backend.service;
 
 import cz.brioh.backend.model.Review;
+import cz.brioh.backend.model.User;
 
 import java.util.List;
 
@@ -10,5 +11,6 @@ public interface ReviewService {
     void delete(long id) throws Exception;
     List<Review> findByMovieId(long id);
     Review findByMovieIdAndUserId(long movieId, long userId);
+    User findUserByMovieIdAndUserId(long movieId, long userId);
 
 }

@@ -2,6 +2,7 @@ package cz.brioh.backend.controller;
 
 import cz.brioh.backend.model.Movie;
 import cz.brioh.backend.model.Review;
+import cz.brioh.backend.model.User;
 import cz.brioh.backend.service.ReviewService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
@@ -36,5 +37,10 @@ public class ReviewController {
     @GetMapping("reviews/search/{movie_id}/movies/{user_id}")
     public Review search(@PathVariable long movie_id, @PathVariable long user_id){
         return reviewService.findByMovieIdAndUserId(movie_id, user_id);
+    }
+
+    @GetMapping("users/search/{movie_id}/movies/{user_id}")
+    public User searchUser(@PathVariable long movie_id, @PathVariable long user_id){
+        return reviewService.findUserByMovieIdAndUserId(movie_id, user_id);
     }
 }

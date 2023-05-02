@@ -2,6 +2,7 @@ package cz.brioh.backend.service;
 
 import cz.brioh.backend.exception.RecordNotFoundException;
 import cz.brioh.backend.model.Review;
+import cz.brioh.backend.model.User;
 import cz.brioh.backend.repository.ReviewRepository;
 import org.springframework.stereotype.Service;
 
@@ -48,6 +49,10 @@ public class ReviewServiceImpl implements ReviewService {
     @Override
     public Review findByMovieIdAndUserId(long movieId, long userId) {
         return reviewRepository.findByMovie_IdAndUser_id(movieId, userId);
+    }
+
+    public User findUserByMovieIdAndUserId(long movieId, long userId){
+        return reviewRepository.findUserByMovie_IdAndUser_Id(movieId, userId);
     }
 
 }
