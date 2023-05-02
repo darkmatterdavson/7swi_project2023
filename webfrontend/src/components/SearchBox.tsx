@@ -28,7 +28,7 @@ const SearchBox = () => {
                        <img id={"custom_preview"} style={{maxWidth: 25}} src={movie.thumbnail.toString()} alt="Card image cap"/> {movie.title} ({movie.year.toString()})
                     </Combobox.Option>
                     </Link>
-                )) : (<p>No entries</p>)}
+                )) : (<p className={"list-group-item bg-dark"} style={{color: "white"}}>No entries</p>)}
             </Combobox.Options>
         </Combobox>
     )

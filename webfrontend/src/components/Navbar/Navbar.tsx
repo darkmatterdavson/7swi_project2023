@@ -1,11 +1,6 @@
 "use client"
 import Link from "next/link";
-import LoginModal from "@/components/Modal/Login";
 import {FormEvent, useState} from "react";
-import LoginAlt from "@/components/Modal/LoginAlt";
-import {FormData} from "next/dist/compiled/@edge-runtime/primitives/fetch";
-import {redirect} from "next/navigation";
-import {NextResponse} from "next/server";
 import SearchBox from "@/components/SearchBox";
 
 /*const handleSearch = async (event: FormEvent<HTMLFormElement>) => {

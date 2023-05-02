@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
-import LoginAlt from "@/components/Modal/LoginAlt";
-import {useState} from "react";
+import LoginAlt from "@/components/Modal/UserOperationModal";
 
 
 
@@ -16,8 +15,7 @@ export default function Home() {
               <div className="container text-center">
                   <div className="row justify-content-center">
                       <div className="col-md-7">
-                          <h1 className="fw-light mt-4 text-black">Recently added movies</h1>
-                          <p className="lead text-black-50">Last time we added these films!</p>
+                          <h1 className="fw-light mt-4 text-black">Sponsored movies</h1>
                       </div>
                   </div>
               </div>

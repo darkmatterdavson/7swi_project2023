@@ -4,6 +4,7 @@ import useData from "@/lib/useData";
 import MovieInfo from "@/components/DetailedMovies/MovieInfo";
 import ReviewList from "@/components/DetailedMovies/ReviewList";
 import ReviewOperations from "@/components/DetailedMovies/ReviewOperations";
+import YourReview from "@/components/DetailedMovies/YourReview";
 
 const MoviePage = ({ params }:{params:{movieID:string}}) =>{
     const {movieID} = params;
@@ -16,10 +17,11 @@ const MoviePage = ({ params }:{params:{movieID:string}}) =>{
                 <ReviewOperations/>
 
                 <h5 className="fw-light mt-4 text-black">Your review:</h5>
-                BBBBLL
+                <YourReview movieID={movieID}/>
 
                 <h5 className="fw-light mt-4 text-black">All reviews</h5>
                 <ReviewList movieID={movieID}/>
+
             </div>
         </>
         )

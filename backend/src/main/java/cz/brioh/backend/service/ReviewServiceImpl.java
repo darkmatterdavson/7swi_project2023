@@ -1,6 +1,7 @@
 package cz.brioh.backend.service;
 
 import cz.brioh.backend.exception.RecordNotFoundException;
+import cz.brioh.backend.model.Movie;
 import cz.brioh.backend.model.Review;
 import cz.brioh.backend.model.User;
 import cz.brioh.backend.repository.ReviewRepository;

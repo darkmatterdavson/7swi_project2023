@@ -1,7 +1,9 @@
 import '../css/custom.css';
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import LoginAlt from "@/components/Modal/LoginAlt";
+import LoginAlt from "@/components/Modal/UserOperationModal";
+import UserActionModal from "@/components/Modal/UserActionModal";
+import UserOperationModal from "@/components/Modal/UserOperationModal";
 
 export const metadata = {
   title: {default: "MovieReviews",  template: "%s | MovieReviews"},
@@ -27,8 +29,8 @@ export default function RootLayout({
               integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
               crossOrigin="anonymous"></script>
 
-        <Navbar/>
-            <LoginAlt />
+        <Navbar />
+            <UserOperationModal />
           {children}
         <br/><br/><br/><br/><br/><br/>
         <Footer/>

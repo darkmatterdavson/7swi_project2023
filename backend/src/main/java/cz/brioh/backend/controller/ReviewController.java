@@ -29,10 +29,11 @@ public class ReviewController {
         reviewService.delete(id);
     }
 
-    @GetMapping("/reviews/search/{movie_id}")
+    @GetMapping("reviews/search/{movie_id}")
     public List<Review> search(@PathVariable("movie_id") long movieId){
         return reviewService.findByMovieId(movieId);
     }
+    //spojeni tabulek dodelat
 
     @GetMapping("reviews/search/{movie_id}/movies/{user_id}")
     public Review search(@PathVariable long movie_id, @PathVariable long user_id){
