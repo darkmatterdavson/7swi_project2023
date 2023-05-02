@@ -11,6 +11,6 @@ public interface ReviewService {
     void delete(long id) throws Exception;
     List<Review> findByMovieId(long id);
     Review findByMovieIdAndUserId(long movieId, long userId);
-    User findUserByMovieIdAndUserId(long movieId, long userId);
+    List<Object[]> findReviewAndUserByMovieIdAndUserId(long movieId, long userId);
 
 }

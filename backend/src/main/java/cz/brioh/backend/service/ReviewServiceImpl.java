@@ -51,8 +51,8 @@ public class ReviewServiceImpl implements ReviewService {
         return reviewRepository.findByMovie_IdAndUser_id(movieId, userId);
     }
 
-    public User findUserByMovieIdAndUserId(long movieId, long userId){
-        return reviewRepository.findUserByMovie_IdAndUser_Id(movieId, userId);
+    public List<Object[]> findReviewAndUserByMovieIdAndUserId(long movieId, long userId){
+        return reviewRepository.findReviewAndUserByMovie_IdAndUser_Id(movieId, userId);
     }
 
 }

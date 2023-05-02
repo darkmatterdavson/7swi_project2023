@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0253590-ae1a-40cd-9d80-8c17e7699dc7" name="Changes" comment="Added unit tests and a method for finding a user by username/checking whether the username is already taken.">
+    <list default="true" id="e0253590-ae1a-40cd-9d80-8c17e7699dc7" name="Changes" comment="Added query and method for retrieving the corresponding user for a given review for a given movie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/controller/ReviewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/brioh/backend/repository/ReviewRepository.java" afterDir="false" />
@@ -193,8 +193,16 @@
       <workItem from="1682273107865" duration="513000" />
       <workItem from="1682526696095" duration="1878000" />
       <workItem from="1682691934341" duration="66000" />
-      <workItem from="1683032133967" duration="3822000" />
+      <workItem from="1683032133967" duration="5398000" />
     </task>
+    <task id="LOCAL-00001" summary="Added query and method for retrieving the corresponding user for a given review for a given movie">
+      <created>1683036077065</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683036077065</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +210,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added unit tests and a method for finding a user by username/checking whether the username is already taken." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added unit tests and a method for finding a user by username/checking whether the username is already taken." />
+    <MESSAGE value="Added query and method for retrieving the corresponding user for a given review for a given movie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added query and method for retrieving the corresponding user for a given review for a given movie" />
   </component>
 </project>
