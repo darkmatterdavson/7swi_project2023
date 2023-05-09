@@ -28,4 +28,9 @@ public class UserController {
     public void delete(@PathVariable("id") long id) throws Exception {
         userService.delete(id);
     }
+
+    @GetMapping("users/search/{email}")
+    public User getByEmail(@PathVariable("email") String email){
+        return userService.getByEmail(email);
+    }
 }
