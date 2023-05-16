@@ -22,8 +22,7 @@ type Review = {
     content: String,
 }
 
-const YourReview = ({movieID}: {movieID: string}) =>{
-    const userID = 3;
+const YourReview = ({movieID, userID}: {movieID: string, userID: string}) =>{
     const {data: review, isLoading}: {data: Review, isLoading: boolean, error: string} = useData(`http://localhost:8080/reviews/search/${movieID}/movies/${userID}`);
 
     return(<>
@@ -40,10 +39,18 @@ const YourReview = ({movieID}: {movieID: string}) =>{
                             <td>
                                 {review.score.toString()}
                             </td>
+                            <td>
+                                <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodal">🗑️</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
-            ):(<p>User has not reviewed this film.</p>)
+            ):(
+                <>
+                    <p>User has not reviewed this film. Add your review.</p>
+                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addmodal">➕</button>
+                </>
+            )
         }
     </>)
 }

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
-import LoginAlt from "@/components/Modal/UserOperationModal";
+import LoginAlt from "@/components/Modal/LoginModal";
 
 
 

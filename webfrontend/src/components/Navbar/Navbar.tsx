@@ -2,22 +2,25 @@
 import Link from "next/link";
 import {FormEvent, useState} from "react";
 import SearchBox from "@/components/SearchBox";
+import {signOut, useSession} from "next-auth/react";
 
 /*const handleSearch = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log(event.currentTarget.search.value);
 }*/
-export default function Navbar(props: {isLogged: boolean }){
-    const [userIsLogged, setUserIsLogged] = useState<boolean>(props.isLogged);
+export default function Navbar(){
+    const {data: session, status} = useSession();
+    //const [userIsLogged, setUserIsLogged] = useState<boolean>(props.isLogged);
     //const [search, setSearch] = useState<string>();
 
     function displayStuff(){
          return (<>{
-             userIsLogged ? (<li className="nav-item">
-                 <Link className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Log
-                     out</Link>
+             (session && status) ? (<li className="nav-item">
+                 {/*<Link className="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#logoutmodal">Log
+                     out</Link>*/}
+                 <button className="nav-link" onClick={() => signOut()}>Logout</button>
              </li>) : (<li className="nav-item">
-                 <button className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Login</button>
+                 <button className="nav-link" data-bs-toggle="modal" data-bs-target="#loginmodal">Login</button>
              </li>)
          }</>);
     }

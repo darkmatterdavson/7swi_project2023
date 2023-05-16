@@ -1,6 +1,7 @@
 import useData from "@/lib/useData";
 import MovieInfo from "@/components/DetailedMovies/MovieInfo";
 import {headers} from "next/headers";
+import DeleteModal from "@/components/Modal/DeleteModal";
 
 type Movie = {
     id: Number,
@@ -27,9 +28,10 @@ type Review = {
 const ReviewList = ({movieID}: {movieID: string}) =>{
     const {data: reviews, isLoading} = useData(`http://localhost:8080/movies/${movieID}/reviews`)
 
+    let isAdmin = true;
     return(<>
-        {(!isLoading && reviews) ?
-            (<div className="content">
+        {!isLoading && reviews ?
+            <div className="content">
                 <table className="table">
                     <thead className="thead-light">
                     <tr>
@@ -44,7 +46,7 @@ const ReviewList = ({movieID}: {movieID: string}) =>{
                         <>
                             <tr key={review[0].id.toString()}>
                                 <td>
-                                    <img id={"user_image"} style={{maxWidth: 35}} src={"https://w7.pngwing.com/pngs/419/473/png-transparent-computer-icons-user-profile-login-user-heroes-sphere-black-thumbnail.png"} alt="user_profile_name"/>
+                                    <img id={"user_image"} style={{maxWidth: 35}} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnIzLd2AEYnEMBJWAhnZH5Gg9txQdwWZLVxQ&usqp=CAU"} alt="user_profile_name"/>
                                     {review[1]}
                                 </td>
                                 <td>
@@ -53,9 +55,16 @@ const ReviewList = ({movieID}: {movieID: string}) =>{
                                 <td>
                                     {review[0].score.toString()}
                                 </td>
+
+                                { (isAdmin) ? (
                                 <td>
-                                    <button type="button" className="btn btn-danger">Delete</button>
+                                    <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodal">🗑️</button>
                                 </td>
+                                ) : (
+                                    <>
+                                        {console.log("[DEBUG] You are not ADMIN!")}
+                                    </>
+                                    )}
                             </tr>
                         </>
 
@@ -63,7 +72,7 @@ const ReviewList = ({movieID}: {movieID: string}) =>{
                 })}
                     </tbody>
                 </table>
-            </div>):(<p>Loading data!</p>)
+            </div>:<p>Loading data!</p>
         }
     </>)
 }

@@ -41,5 +41,4 @@ public class MovieController {
     public void delete(@PathVariable("id") long id) throws Exception {
         movieService.delete(id);
     }
-
 }
