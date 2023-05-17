@@ -11,4 +11,5 @@ public interface UserService {
     void delete(long id) throws Exception;
     boolean usernameExists(String name);
     User getByEmail(String email);
+    User getByEmailAndPassword(String email, String password);
 }

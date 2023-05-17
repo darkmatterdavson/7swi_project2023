@@ -33,4 +33,10 @@ public class UserController {
     public User getByEmail(@PathVariable("email") String email){
         return userService.getByEmail(email);
     }
+
+    @GetMapping("users")
+    public User getByEmailAndPassword(@RequestParam("email") String email, @RequestParam("password") String password) {
+        return userService.getByEmailAndPassword(email, password);
+    }
+
 }

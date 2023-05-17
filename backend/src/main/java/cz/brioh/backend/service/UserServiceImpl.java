@@ -6,6 +6,7 @@ import cz.brioh.backend.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -60,6 +61,29 @@ public class UserServiceImpl implements UserService{
     @Override
     public User getByEmail(String email){
         return userRepository.findByEmail(email);
+    }
+
+    @Override
+    public User getByEmailAndPassword(String email, String password){
+        boolean exists = userRepository.existsUserByEmailAndPassword(email, password);
+        if(exists) return userRepository.findByEmailAndPassword(email, password);
+
+        User user = new User();
+        String randomUsername = "user";
+        boolean nameIsUnique = false;
+        while(!nameIsUnique){
+            Random rnd = new Random();
+            int randomUserNumber = rnd.nextInt(1000000,9999999);
+            randomUsername += randomUserNumber;
+            boolean userAlreadyExists = userRepository.existsUserByName(randomUsername);
+            if(!userAlreadyExists) nameIsUnique = true;
+
+        }
+        user.setEmail(email);
+        user.setPassword(password);
+        user.setName(randomUsername);
+        create(user);
+        return user;
     }
 
 }
