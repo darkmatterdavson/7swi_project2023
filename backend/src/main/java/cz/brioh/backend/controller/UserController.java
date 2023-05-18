@@ -22,7 +22,9 @@ public class UserController {
 
     @GetMapping("users/{id}")
     public User get(@PathVariable("id") long id){
-        return userService.get(id);
+        User ret = userService.get(id);
+        ret.setPassword(null);
+        return ret;
     }
 
     @DeleteMapping("users/{id}")
@@ -32,13 +34,18 @@ public class UserController {
 
     @GetMapping("users/search/{email}")
     public User getByEmail(@PathVariable("email") String email){
-        return userService.getByEmail(email);
+        User ret = userService.getByEmail(email);
+        ret.setPassword(null);
+        return ret;
     }
 
     @PostMapping("/login")
     public User getByEmailAndPassword(@Valid @RequestBody() Login user) {
         System.out.println(user.getEmail()+ " " + user.getPassword());
-        return userService.getByEmailAndPassword(user.getEmail(), user.getPassword());
+        User newOrFoundUser = userService.getByEmailAndPassword(user.getEmail(), user.getPassword());
+        newOrFoundUser.setPassword(null);
+        return newOrFoundUser;
     }
+
 
 }
