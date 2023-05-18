@@ -1,4 +1,6 @@
 import useData from "@/lib/useData";
+import {Dispatch, FormEvent, SetStateAction} from "react";
+import {toast} from "react-toastify";
 
 type Movie = {
     id: Number,
@@ -15,16 +17,29 @@ type User = {
 }
 
 type Review = {
-    id: Number,
+    id: number,
     user: User,
     movie: Movie,
     score: String,
     content: String,
 }
 
-const YourReview = ({movieID, userID}: {movieID: string, userID: string}) =>{
+const YourReview = ({movieID, userID, openModal}: {movieID: string, userID: string, openModal: Dispatch<SetStateAction<boolean>>}) =>{
     const {data: review, isLoading}: {data: Review, isLoading: boolean, error: string} = useData(`http://localhost:8080/reviews/search/${movieID}/movies/${userID}`);
 
+
+    const handleDelete = async (reviewID: number) => {
+        const res = await fetch(`http://localhost:8080/reviews/${reviewID}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        console.log(await res);
+        if(!res.ok) {
+            //error toast
+        }
+    }
     return(<>
         {(!isLoading && review) ?
             (
@@ -40,7 +55,7 @@ const YourReview = ({movieID, userID}: {movieID: string, userID: string}) =>{
                                 {review.score.toString()}
                             </td>
                             <td>
-                                <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodal">🗑️</button>
+                                <button type="button" className="btn btn-danger" onClick={() => handleDelete(review.id)}>🗑️</button>
                             </td>
                         </tr>
                     </tbody>
@@ -48,7 +63,8 @@ const YourReview = ({movieID, userID}: {movieID: string, userID: string}) =>{
             ):(
                 <>
                     <p>User has not reviewed this film. Add your review.</p>
-                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addmodal">➕</button>
+                    {/*<button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addmodal">➕</button>*/}
+                    <button className="btn btn-primary" onClick={() => openModal(true)}>➕</button>
                 </>
             )
         }

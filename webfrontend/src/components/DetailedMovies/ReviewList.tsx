@@ -1,7 +1,5 @@
 import useData from "@/lib/useData";
-import MovieInfo from "@/components/DetailedMovies/MovieInfo";
-import {headers} from "next/headers";
-import DeleteModal from "@/components/Modal/DeleteModal";
+import {toast} from "react-toastify";
 
 type Movie = {
     id: Number,
@@ -18,17 +16,31 @@ type User = {
 }
 
 type Review = {
-    id: Number,
+    id: number,
     user: User,
     movie: Movie,
     score: String,
     content: String,
 }
 
-const ReviewList = ({movieID}: {movieID: string}) =>{
+const ReviewList = ({movieID, isAdmin}: {movieID: string, isAdmin: boolean}) =>{
     const {data: reviews, isLoading} = useData(`http://localhost:8080/movies/${movieID}/reviews`)
 
-    let isAdmin = true;
+    console.log(reviews);
+    const handleAdminDelete = async (reviewID: number) => {
+        const res = await fetch(`http://localhost:8080/reviews/${reviewID}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        console.log(await res);
+        if(!res.ok) {
+            //error toast
+            toast("[Admin] Recenze nebyla odstraněna.");
+        }
+        toast("[Admin] Recenze byla odstraněna. (Refreshěte stránku)");
+    }
     return(<>
         {!isLoading && reviews ?
             <div className="content">
@@ -44,21 +56,26 @@ const ReviewList = ({movieID}: {movieID: string}) =>{
                 {reviews?.map((review: Review) => {
                     return (
                         <>
+                            {/*@ts-ignore*/}
                             <tr key={review[0].id.toString()}>
                                 <td>
                                     <img id={"user_image"} style={{maxWidth: 35}} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnIzLd2AEYnEMBJWAhnZH5Gg9txQdwWZLVxQ&usqp=CAU"} alt="user_profile_name"/>
+                                    {/*@ts-ignore*/}
                                     {review[1]}
                                 </td>
                                 <td>
+                                    {/*@ts-ignore*/}
                                     {review[0].content}
                                 </td>
                                 <td>
-                                    {review[0].score.toString()}
+                                    {/*@ts-ignore*/}
+                                    {review[0].score}
                                 </td>
 
                                 { (isAdmin) ? (
                                 <td>
-                                    <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemodal">🗑️</button>
+                                    {/*@ts-ignore*/}
+                                    <button type="button" className="btn btn-danger" onClick={() => handleAdminDelete(review[0].id)}>🗑️</button>
                                 </td>
                                 ) : (
                                     <>
