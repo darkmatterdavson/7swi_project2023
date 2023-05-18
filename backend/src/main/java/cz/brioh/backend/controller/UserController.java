@@ -1,5 +1,6 @@
 package cz.brioh.backend.controller;
 
+import cz.brioh.backend.model.Login;
 import cz.brioh.backend.model.User;
 import cz.brioh.backend.service.UserService;
 import jakarta.validation.Valid;
@@ -34,9 +35,10 @@ public class UserController {
         return userService.getByEmail(email);
     }
 
-    @GetMapping("users")
-    public User getByEmailAndPassword(@RequestParam("email") String email, @RequestParam("password") String password) {
-        return userService.getByEmailAndPassword(email, password);
+    @PostMapping("/login")
+    public User getByEmailAndPassword(@Valid @RequestBody() Login user) {
+        System.out.println(user.getEmail()+ " " + user.getPassword());
+        return userService.getByEmailAndPassword(user.getEmail(), user.getPassword());
     }
 
 }
