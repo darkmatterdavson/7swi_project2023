@@ -68,6 +68,8 @@ public class UserServiceImpl implements UserService{
         System.out.println("Input: " + email + " " + password);
         boolean exists = userRepository.existsUserByEmailAndPassword(email, password);
         if(exists) return userRepository.findByEmailAndPassword(email, password);
+        boolean existsEmail = userRepository.existsUserByEmail(email);
+        if(existsEmail) return null;
 
         User user = new User();
         String randomUsername = "user";
