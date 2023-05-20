@@ -20,7 +20,10 @@
 # ARCHITECTURE DIAGRAM:
 
 # Analytical Sequence Diagram
+![analyticky_diagram](specs/images/Sekvenční%20Analytický.png)
 
 # Design Sequence Diagram
+![analyticky_diagram](specs/images/Sekvenční%20Programátorský.png)
 
 # EPC Diagram
+![epc_diagram](specs/images/Business%20Process.png)
