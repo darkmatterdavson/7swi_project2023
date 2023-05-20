@@ -15,9 +15,15 @@
 
 # DATABASE SCHEME:
 
-# ARCHITECTURE DIAGRAM:
+## ARCHITECTURE DIAGRAM:
+![architecture_diagram](specs/images/architecture_diagram.png)
 
-# ARCHITECTURE DIAGRAM:
+## CLASS DIAGRAM:
+TO DO
+
+## USE CASE:
+- [Use cases](images/use_case/swi_project_use_cases.pdfOOO)
+![use_case](specs/images/Use%20Case.png)
 
 # Analytical Sequence Diagram
 ![analyticky_diagram](specs/images/Sekvenční%20Analytický.png)
