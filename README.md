@@ -11,6 +11,7 @@
 -- frontend: Next.Js
 
 # SWOT:
+![swot_analyza](specs/images/SWOT.png)
 
 # DATABASE SCHEME:
 
