@@ -13,7 +13,8 @@
 # SWOT:
 ![swot_analyza](specs/images/SWOT.png)
 
-# DATABASE SCHEME:
+## DATABASE SCHEME
+![database_schema]()
 
 ## ARCHITECTURE DIAGRAM:
 ![architecture_diagram](specs/images/architecture_diagram.png)
