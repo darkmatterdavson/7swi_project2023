@@ -14,7 +14,7 @@
 ![swot_analyza](specs/images/SWOT.png)
 
 ## DATABASE SCHEME
-![database_schema]()
+![database_schema](specs/images/db_scheme.png)
 
 ## ARCHITECTURE DIAGRAM:
 ![architecture_diagram](specs/images/architecture_diagram.png)
