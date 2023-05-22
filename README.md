@@ -19,7 +19,7 @@
 ![architecture_diagram](specs/images/architecture_diagram.png)
 
 ## CLASS DIAGRAM:
-TO DO
+![use_case](specs/ClassDiagram_SWI.png)
 
 ## USE CASE:
 
