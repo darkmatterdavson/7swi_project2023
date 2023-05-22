@@ -36,6 +36,7 @@
 
 # EPC Diagram
 ![epc_diagram1](specs/images/epc_diagram_actual.png)
+
 -[epc_diagram1](specs/images/Business%20Process.png)
 
 # WIREFRAME:
