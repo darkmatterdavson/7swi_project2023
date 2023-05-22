@@ -35,3 +35,6 @@ TO DO
 
 # EPC Diagram
 ![epc_diagram](specs/images/Business%20Process.png)
+
+# WIREFRAME:
+![swot_analyza](specs/images/wireframe.png)
