@@ -8,7 +8,7 @@
 
 -- Backend: Spring Boot REST
 
--- frontend: Next.Js
+-- frontend: Next.JS
 
 # SWOT:
 ![swot_analyza](specs/images/SWOT.png)
@@ -22,7 +22,7 @@
 TO DO
 
 ## USE CASE:
-- [Use cases](images/use_case/swi_project_use_cases.pdfOOO)
+- [Use cases](specs/use_case_7swi2023.pdf)
 ![use_case](specs/images/Use%20Case.png)
 
 # Analytical Sequence Diagram
