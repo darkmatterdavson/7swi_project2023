@@ -22,7 +22,9 @@
 TO DO
 
 ## USE CASE:
+
 - [Use cases](specs/use_case_7swi2023.pdf)
+
 ![use_case](specs/images/Use%20Case.png)
 
 # Analytical Sequence Diagram
