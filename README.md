@@ -35,7 +35,8 @@
 ![analyticky_diagram](specs/images/Sekvenční%20Programátorský.png)
 
 # EPC Diagram
-![epc_diagram](specs/images/Business%20Process.png)
+![epc_diagram1](specs/images/epc_diagram_actual.png)
+-[epc_diagram1](specs/images/Business%20Process.png)
 
 # WIREFRAME:
 ![swot_analyza](specs/images/wireframe.png)
