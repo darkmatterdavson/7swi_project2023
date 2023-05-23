@@ -1,6 +1,6 @@
 # 7SWI1 SEMESTRÁLNÍ PRÁCE (2023)
 
---Téma: webová aplikace na které monou uživatelé dávat recenze s komentářem a hodnocením
+--Téma: webová aplikace na které mohou uživatelé dávat recenze s komentářem a hodnocením
 
 --Přihlášený uživatel (user) může recenzovat film pouze jednou. A pokud by chtěl změnit recenzi, tak pozmění staré score a text k recenzi nebo případně ji smaže. (Manipuluje maximálně se svojí recenzí)
 
